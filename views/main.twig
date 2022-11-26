@@ -1,0 +1,22 @@
+{% extends "__layout.twig" %}
+
+{% block content %}
+
+<div class="row">
+	{% for item in space_objects %}
+	<div class="col-auto d-flex flex-column border rounded align-items-center p-3 m-1">
+
+		<img src="{{ item.image }}" ,
+			style="border-radius: 50%; border: 2px solid rgb(27, 32, 64); aspect-ratio: 1 / 1; height: 250px; object-fit: cover">
+
+		<a class="btn btn-primary w-100 mt-3" href="/space-object/{{item.id}}">{{item.title}}</a>
+
+		<div class="row-auto">
+			<a class="btn btn-link" href="/space-object/{{item.id}}/image">Картинка</a>
+			<a class="btn btn-link" href="/space-object/{{item.id}}/info">Описание</a>
+		</div>
+
+	</div>
+	{% endfor %}
+</div>
+{% endblock %}
