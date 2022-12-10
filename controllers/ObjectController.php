@@ -9,7 +9,7 @@ class ObjectController extends BaseSpaceTwigController
     {
         $context = parent::getContext();
 
-        $query = $this->pdo->prepare("SELECT description, image, info, id FROM space_objects WHERE id= :my_id");
+        $query = $this->pdo->prepare("SELECT description, image, info, id FROM amazing_animals WHERE id= :my_id");
         $query->bindValue("my_id", $this->params['id']);
         $query->execute();
         $data = $query->fetch();

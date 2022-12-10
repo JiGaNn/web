@@ -1,0 +1,45 @@
+{% extends "__layout.twig" %}
+
+{% block content %}
+<span class="fs-1 fw-normal">Поиск</span>
+
+<form action="">
+    <div class="row mb-4">
+
+        <div class="col">
+            <label for="formGroupExampleInput" class="form-label">Тип</label>
+            <select name="type" class="form-control" id="formGroupExampleInput">
+                <option value="Все">Все</option>
+                <option value="Наземные">Наземные</option>
+                <option value="Подводные">Подводные</option>
+            </select>
+        </div>
+
+        <div class="col">
+            <label for="formGroupExampleInput2" class="form-label">Название</label>
+            <input type="text" name="title" class="form-control" id="formGroupExampleInput2">
+        </div>
+
+        <div class="col">
+            <label for="formGroupExampleInput3" class="form-label">Описание</label>
+            <input type="text" name="description" class="form-control" id="formGroupExampleInput3">
+        </div>
+
+        <div class="col align-self-end">
+            <button type="submit" class="btn btn-primary">Найти</button>
+        </div>
+
+    </div>
+</form>
+
+{% for item in animals %}
+<ul class="list-group">
+    <div class="rounded d-flex">
+        <li class="list-group-item w-100">
+            <a class="btn btn-link" href="/amazing-animal/{{item.id}}">{{item.title}}</a>
+        </li>
+    </div>
+</ul>
+{% endfor %}
+
+{% endblock %}

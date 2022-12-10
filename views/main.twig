@@ -3,17 +3,17 @@
 {% block content %}
 
 <div class="row">
-	{% for item in space_objects %}
+	{% for item in animals %}
 	<div class="col-auto d-flex flex-column border rounded align-items-center p-3 m-1">
 
 		<img src="{{ item.image }}" ,
 			style="border-radius: 50%; border: 2px solid rgb(27, 32, 64); aspect-ratio: 1 / 1; height: 250px; object-fit: cover">
 
-		<a class="btn btn-primary w-100 mt-3" href="/space-object/{{item.id}}">{{item.title}}</a>
+		<a class="btn btn-primary w-100 mt-3" href="/amazing-animal/{{item.id}}">{{item.title}}</a>
 
 		<div class="row-auto">
-			<a class="btn btn-link" href="/space-object/{{item.id}}?show=image">Картинка</a>
-			<a class="btn btn-link" href="/space-object/{{item.id}}?show=info">Описание</a>
+			<a class="btn btn-link" href="/amazing-animal/{{item.id}}?show=image">Картинка</a>
+			<a class="btn btn-link" href="/amazing-animal/{{item.id}}?show=info">Описание</a>
 		</div>
 
 	</div>
