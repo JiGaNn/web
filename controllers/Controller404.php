@@ -1,13 +1,13 @@
 <?php
-require_once "BaseSpaceTwigController.php";
+require_once "BaseAnimalTwigController.php";
 
-class Controller404 extends BaseSpaceTwigController {
+class Controller404 extends BaseAnimalTwigController {
     public $template = "404.twig";
     public $title = "Страница не найдена";
 
-    public function get()
+    public function get($context)
     {
         http_response_code(404); // с помощью http_response_code устанавливаем код возврата 404
-        parent::get(); // вызываем базовый метод get(), который собственно уже отрендерит страницу
+        parent::get($context); // вызываем базовый метод get(), который собственно уже отрендерит страницу
     }
 }

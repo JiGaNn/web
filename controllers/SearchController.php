@@ -1,7 +1,7 @@
 <?php
-require_once "BaseSpaceTwigController.php";
+require_once "BaseAnimalTwigController.php";
 
-class SearchController extends BaseSpaceTwigController
+class SearchController extends BaseAnimalTwigController
 {
     public $template = "search.twig";
 

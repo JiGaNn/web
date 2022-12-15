@@ -1,7 +1,7 @@
 <?php
-require_once "BaseSpaceTwigController.php";
+require_once "BaseAnimalTwigController.php";
 
-class MainController extends BaseSpaceTwigController {
+class MainController extends BaseAnimalTwigController {
     public $template = "main.twig";
     public $title = "Main";
     public function getContext(): array

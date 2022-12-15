@@ -1,28 +1,25 @@
 <?php
-require_once "BaseController.php"; // обязательно импортим BaseController
+require_once "BaseController.php";
 
 class TwigBaseController extends BaseController {
-    public $title = ""; // название страницы
-    public $template = ""; // шаблон страницы
+    public $title = "";
+    public $template = "";
 
-    protected \Twig\Environment $twig; // ссылка на экземпляр twig, для рендернига
+    protected \Twig\Environment $twig;
     
 
     public function setTwig($twig) {
         $this->twig = $twig;
     }
     
-    // переопределяем функцию контекста
     public function getContext() : array
     {
-        $context = parent::getContext(); // вызываем родительский метод
-        $context['title'] = $this->title; // добавляем title в контекст
+        $context = parent::getContext();
+        $context['title'] = $this->title;
         return $context;
     }
     
-    // функция гет, рендерит результат используя $template в качестве шаблона
-    // и вызывает функцию getContext для формирования словаря контекста
-    public function get() {
-        echo $this->twig->render($this->template, $this->getContext());
+    public function get(array $context) {
+        echo $this->twig->render($this->template, $context);
     }
 }

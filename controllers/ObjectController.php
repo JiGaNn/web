@@ -1,7 +1,7 @@
 <?php
-require_once "BaseSpaceTwigController.php";
+require_once "BaseAnimalTwigController.php";
 
-class ObjectController extends BaseSpaceTwigController
+class ObjectController extends BaseAnimalTwigController
 {
     public $template = "__object.twig";
 
@@ -21,10 +21,10 @@ class ObjectController extends BaseSpaceTwigController
 
         return $context;
     }
-    public function get() {
+    public function get($context) {
         if (isset($_GET['show'])) {
             $this->template = "{$_GET['show']}.twig";
         }
-        parent::get();
+        parent::get($context);
     }
 }
