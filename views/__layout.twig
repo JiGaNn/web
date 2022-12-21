@@ -29,14 +29,17 @@
                 <ul class="navbar-nav">
                     {% for type in types %}
                     <li class="nav-item">
-                        <a href="/?type={{ type.type }}" class="nav-link">{{type.type|title}}</a>
+                        <a href="/?type={{ type.title }}" class="nav-link">{{type.title|title}}</a>
                     </li>
                     {% endfor %}
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="/search">Поиск</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/space-object/create">Добавить</a>
+                        <a class="nav-link" aria-current="page" href="/amazing-animal/create-animal">Добавить</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/amazing-animal/create-type">Новый тип</a>
                     </li>
                 </ul>
             </div>

@@ -4,7 +4,14 @@
 
 <div class="row">
 	{% for item in animals %}
-	<div class="col-auto d-flex flex-column border rounded align-items-center p-3 m-1">
+	<div class="col-auto d-flex flex-column border rounded align-items-center p-3 m-1 position-relative">
+		<div class="position-absolute" style="right: 4px; top: 4px">
+			<form action="/amazing-animal/{{ item.id }}/delete-animal" method="POST">
+				<button type="submit" class="btn btn-danger">
+					<i class="fas fa-times"></i>
+				</button>
+			</form>
+		</div>
 
 		<img src="{{ item.image }}" ,
 			style="border-radius: 50%; border: 2px solid rgb(27, 32, 64); aspect-ratio: 1 / 1; height: 250px; object-fit: cover">

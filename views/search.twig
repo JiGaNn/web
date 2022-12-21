@@ -10,8 +10,9 @@
             <label for="formGroupExampleInput" class="form-label">Тип</label>
             <select name="type" class="form-control" id="formGroupExampleInput">
                 <option value="Все">Все</option>
-                <option value="Наземные">Наземные</option>
-                <option value="Подводные">Подводные</option>
+                {% for type in types %}
+                <option value="{{type.title}}">{{type.title|title}}</option>
+                {% endfor %}
             </select>
         </div>
 
