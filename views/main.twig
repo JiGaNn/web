@@ -13,6 +13,14 @@
 			</form>
 		</div>
 
+		<div class="position-absolute" style="right: 44px; top: 4px">
+			<form action="/amazing-animal/{{ item.id }}/edit" method="POST">
+				<button type="submit" class="btn btn-info">
+					<i class="fa-regular fa-pen-to-square"></i>
+				</button>
+			</form>
+		</div>
+
 		<img src="{{ item.image }}" ,
 			style="border-radius: 50%; border: 2px solid rgb(27, 32, 64); aspect-ratio: 1 / 1; height: 250px; object-fit: cover">
 

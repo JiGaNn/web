@@ -6,6 +6,7 @@ require_once "../controllers/Controller404.php";
 require_once "../controllers/ObjectController.php";
 require_once "../controllers/SearchController.php";
 require_once "../controllers/AnimalObjectCreateController.php";
+require_once "../controllers/AnimalObjectUpdateController.php";
 require_once "../controllers/AnimalObjectDeleteController.php";
 require_once "../controllers/AnimalTypeCreateController.php";
 
@@ -23,6 +24,7 @@ $router->add("/", MainController::class);
 $router->add("/search", SearchController::class);
 $router->add("/amazing-animal/create-animal", AnimalObjectCreateController::class);
 $router->add("/amazing-animal/(?P<id>\d+)/delete-animal", AnimalObjectDeleteController::class);
+$router->add("/amazing-animal/(?P<id>\d+)/edit", AnimalObjectUpdateController::class);
 $router->add("/amazing-animal/create-type", AnimalTypeCreateController::class);
 $router->add("/amazing-animal/(?P<id>\d+)", ObjectController::class);
 $router->get_or_default(Controller404::class);
